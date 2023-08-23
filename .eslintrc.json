@@ -1,0 +1,77 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["react", "react-hooks", "jsx-a11y", "prettier"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "@typescript-eslint/no-var-requires": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off",
+    "semi": "warn",
+    "react/jsx-indent": ["error", 2],
+    "max-len": [2, 120, 2, {"ignorePattern": "d=\"([\\s\\S]*?)\""}],
+//    "no-restricted-syntax": [
+//      "error",
+//      {
+//        "selector": "ExportDefaultDeclaration",
+//        "message": "Restricted default export, prefer named exports!"
+//      }
+//    ],
+    "no-console": [
+      "error",
+      { "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/no-set-state": "off",
+    "prettier/prettier": ["error", {
+      "endOfLine": "auto"
+    }],
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0, "maxEOF": 0 }],
+    "react/jsx-props-no-spreading": "off",
+    "prefer-promise-reject-errors": "off",
+    "camelcase": "off",
+    "@typescript-eslint/no-explicit-any": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]
+      }
+    }
+  },
+  "ignorePatterns": ["src/openapi/*", "*.d.ts"],
+  "overrides": [
+    {
+      "files": [
+        "*.d.ts"
+      ],
+      "rules": {
+        "no-restricted-syntax": ["off"]
+      }
+    }
+  ]
+}
