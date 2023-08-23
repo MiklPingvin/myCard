@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const MainContentStyled = styled.div`
   display: flex;
+  justify-content: center;
 `;
 
 type MainContentProps = {
