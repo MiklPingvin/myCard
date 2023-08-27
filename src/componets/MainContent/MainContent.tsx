@@ -4,6 +4,9 @@ import styled from 'styled-components';
 const MainContentStyled = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
 `;
 
 type MainContentProps = {
